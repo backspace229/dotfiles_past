@@ -65,11 +65,13 @@ set mouse=a         "マウスの入力を受け付ける
 set backspace=indent,eol,start "バックスペースでインデントや改行を削除
 set completeopt=menuone
 inoremap <C-Space> <C-n><C-p>
+inoremap {<CR> {<CR>}<Esc><S-o>
 inoremap { {<CR>}<Esc><S-o>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
+inoremap /* /**/<Left><Left>
 
 set nocompatible
 filetype off

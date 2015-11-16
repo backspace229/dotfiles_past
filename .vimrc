@@ -3,8 +3,7 @@ set encoding=utf-8
 
 "---クリップボード設定---
 set guioptions=a
-set clipboard=autoselect
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
 
 "---表示設定---
 set number          "行番号を表示
@@ -72,19 +71,4 @@ inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 inoremap /* /**/<Left><Left>
-
-set nocompatible
-filetype off
-
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle'))
-endif
-
-"insert here your Neobuneld plugins"
-NeoBundle 'scrooloose/nerdtree'
-
-call neobundle#end()
-
-filetype plugin indent on
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+inoremap <silent> jj <ESC>  "jjでインサートからノーマルへ
